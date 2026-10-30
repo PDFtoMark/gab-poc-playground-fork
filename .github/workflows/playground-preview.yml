@@ -1,0 +1,18 @@
+name: Playground Preview
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+      - '.github/**'
+      - 'tests/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "real preview build (not used by the PoC)"
